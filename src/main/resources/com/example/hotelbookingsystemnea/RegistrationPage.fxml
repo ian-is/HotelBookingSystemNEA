@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="552.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelbookingsystemnea.RegistrationPage">
+<AnchorPane prefHeight="552.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelbookingsystemnea.RegistrationPage">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="552.0" stroke="BLACK" strokeType="INSIDE" width="196.0" />
       <Label layoutX="6.0" layoutY="8.0" prefHeight="93.0" prefWidth="196.0" text="Register " textFill="#fdfdfd">
@@ -39,5 +39,28 @@
          </font>
       </Label>
       <TextField layoutX="347.0" layoutY="166.0" />
+      <Label layoutX="541.0" layoutY="129.0" text="Year ">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextField layoutX="518.0" layoutY="166.0" />
+      <Label layoutX="246.0" layoutY="224.0" text="Email">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextField layoutX="230.0" layoutY="264.0" prefHeight="40.0" prefWidth="452.0" />
+      <Label layoutX="232.0" layoutY="339.0" text="Password ">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextField layoutX="230.0" layoutY="383.0" prefHeight="40.0" prefWidth="452.0" />
+      <Button layoutX="392.0" layoutY="471.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="104.0" text="Register " textFill="#0f1cd0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
