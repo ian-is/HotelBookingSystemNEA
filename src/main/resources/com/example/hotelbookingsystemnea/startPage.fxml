@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" stroke="BLACK" strokeType="INSIDE" width="132.0" />
       <Label alignment="CENTER" layoutX="24.0" layoutY="7.0" prefHeight="45.0" prefWidth="85.0" text="sign in : " textAlignment="JUSTIFY">
@@ -25,12 +25,13 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <Label layoutX="182.0" layoutY="240.0" text="dont have an account?" />
-      <Button layoutX="316.0" layoutY="236.0" mnemonicParsing="false" text="Register" textFill="#0e0ed5" />
-      <Button layoutX="217.0" layoutY="332.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="167.0" text="Employee log in " textFill="#1814f0">
+      <Label layoutX="217.0" layoutY="286.0" text="dont have an account?" />
+      <Button layoutX="354.0" layoutY="282.0" mnemonicParsing="false" text="Register" textFill="#0e0ed5" />
+      <Button fx:id="EmployeeLoginBtn" layoutX="217.0" layoutY="332.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="167.0" text="Employee log in " textFill="#1814f0">
          <font>
             <Font size="10.0" />
          </font>
       </Button>
+      <Button layoutX="256.0" layoutY="235.0" mnemonicParsing="false" text="L O G I N" textFill="#3131e1" />
    </children>
 </AnchorPane>
