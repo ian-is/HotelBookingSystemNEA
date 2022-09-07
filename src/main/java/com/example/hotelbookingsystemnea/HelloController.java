@@ -19,12 +19,14 @@ public class HelloController {
 
 
     @FXML
-    public void switchToEmployeeLoginPage (ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("EmployeeLogin.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.setScene(scene);
-        stage.show();
+    public void switchToEmployeeLoginPage (ActionEvent event) throws IOException  {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("EmployeeLogin.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+            stage.setScene(scene);
+            stage.show();
+
 
     }
     @FXML
