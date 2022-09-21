@@ -18,6 +18,7 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("startPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

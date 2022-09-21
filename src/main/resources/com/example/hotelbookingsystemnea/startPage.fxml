@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelbookingsystemnea.HelloController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="32.0" stroke="BLACK" strokeType="INSIDE" width="94.0" />
       <Label alignment="CENTER" layoutX="6.0" layoutY="-8.0" prefHeight="45.0" prefWidth="85.0" text="sign in : " textAlignment="JUSTIFY">
@@ -26,8 +26,8 @@
          </font>
       </Label>
       <Label layoutX="217.0" layoutY="286.0" text="dont have an account?" />
-      <Button layoutX="354.0" layoutY="282.0" mnemonicParsing="false" text="Register" textFill="#0e0ed5" />
-      <Button fx:id="EmployeeLoginBtn" layoutX="217.0" layoutY="332.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="167.0" text="Employee log in " textFill="#1814f0">
+      <Button fx:id="RegisterBTN" layoutX="354.0" layoutY="282.0" mnemonicParsing="false" onAction="#registerButton" text="Register" textFill="#0e0ed5" />
+      <Button fx:id="EmployeeLoginBtn" layoutX="217.0" layoutY="332.0" mnemonicParsing="false" onAction="#switchToEmployeeLoginPage" prefHeight="17.0" prefWidth="167.0" text="Employee log in " textFill="#1814f0">
          <font>
             <Font size="10.0" />
          </font>
