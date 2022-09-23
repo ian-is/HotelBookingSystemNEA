@@ -46,8 +46,24 @@ public class HelloController {
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
-
-
+    }
+    @FXML // return button on the registration page takes you back to the start page
+    public void registrationReturnBtn (ActionEvent event) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("startPage.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        stage.setResizable(false);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML // return button on the AdminHomePage takes you back to the EmployeeLogin Page
+    public void adminReturnBtn (ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("EmployeeLogin.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(fxmlLoader.load(), 705, 440);
+        stage.setResizable(false);
+        stage.setScene(scene);
+        stage.show();
     }
 
 
