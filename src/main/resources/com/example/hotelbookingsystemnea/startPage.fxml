@@ -2,18 +2,11 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelbookingsystemnea.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelbookingsystemnea.HelloController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7cbaf5" height="32.0" stroke="BLACK" strokeType="INSIDE" width="94.0" />
-      <Label alignment="CENTER" layoutX="6.0" layoutY="-8.0" prefHeight="45.0" prefWidth="85.0" text="sign in : " textAlignment="JUSTIFY">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </Label>
-      <TextField layoutX="182.0" layoutY="113.0" prefHeight="32.0" prefWidth="251.0" />
+      <TextField fx:id="EmailTextField" layoutX="182.0" layoutY="113.0" prefHeight="32.0" prefWidth="251.0" />
       <TextField layoutX="182.0" layoutY="190.0" prefHeight="32.0" prefWidth="251.0" />
       <Label layoutX="182.0" layoutY="74.0" prefHeight="32.0" prefWidth="85.0" text="Email">
          <font>
@@ -25,13 +18,14 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <Label layoutX="217.0" layoutY="286.0" text="dont have an account?" />
+      <Label layoutX="217.0" layoutY="286.0" text="Dont have an account?" />
       <Button fx:id="RegisterBTN" layoutX="354.0" layoutY="282.0" mnemonicParsing="false" onAction="#registerButton" text="Register" textFill="#0e0ed5" />
       <Button fx:id="EmployeeLoginBtn" layoutX="217.0" layoutY="332.0" mnemonicParsing="false" onAction="#switchToEmployeeLoginPage" prefHeight="17.0" prefWidth="167.0" text="Employee log in " textFill="#1814f0">
          <font>
             <Font size="10.0" />
          </font>
       </Button>
-      <Button layoutX="256.0" layoutY="235.0" mnemonicParsing="false" text="L O G I N" textFill="#3131e1" />
+      <Button layoutX="256.0" layoutY="235.0" mnemonicParsing="false" onDragDetected="#EmptyEmailTextField" text="L O G I N" textFill="#3131e1" />
+      <Label fx:id="LoginMessage" layoutX="185.0" layoutY="43.0" prefHeight="17.0" prefWidth="211.0" textFill="#eb0707" />
    </children>
 </AnchorPane>
