@@ -25,7 +25,7 @@
             <Font size="10.0" />
          </font>
       </Button>
-      <Button layoutX="256.0" layoutY="235.0" mnemonicParsing="false" onDragDetected="#EmptyEmailTextField" text="L O G I N" textFill="#3131e1" />
+      <Button layoutX="256.0" layoutY="235.0" mnemonicParsing="false" text="L O G I N" textFill="#3131e1" />
       <Label fx:id="LoginMessage" layoutX="185.0" layoutY="43.0" prefHeight="17.0" prefWidth="211.0" textFill="#eb0707" />
    </children>
 </AnchorPane>
