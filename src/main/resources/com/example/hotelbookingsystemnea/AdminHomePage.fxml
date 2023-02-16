@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="503.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelbookingsystemnea.HelloController">
+<AnchorPane prefHeight="503.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.CustomerLoginAndRegistrationController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#70b5f5" height="64.0" stroke="BLACK" strokeType="INSIDE" width="741.0" />
       <Label layoutX="246.0" prefHeight="75.0" prefWidth="293.0" text="Admin Menu">

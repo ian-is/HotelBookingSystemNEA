@@ -1,4 +1,4 @@
-package com.example.hotelbookingsystemnea;
+package Objects;
 
 public class User {
 
@@ -8,13 +8,13 @@ public class User {
 
     private String Surname;
 
-    private int DateOfBirth;
+    private String DateOfBirth;
 
     private String Email;
 
     private String Password;
 
-    public User (int CustomerID, String FirstName,String Surname,int DateOfBirth, String Email, String Password){
+    public User (int CustomerID, String FirstName, String Surname, String DateOfBirth, String Email, String Password){
         this.setCustomerID(CustomerID);
         this.setFirstName(FirstName);
         this.setSurname(Surname);
@@ -49,11 +49,11 @@ public class User {
         Surname = surname;
     }
 
-    public int getDateOfBirth() {
+    public String getDateOfBirth() {
         return DateOfBirth;
     }
 
-    public void setDateOfBirth(int dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         DateOfBirth = dateOfBirth;
     }
 

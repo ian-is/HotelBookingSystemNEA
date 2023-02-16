@@ -1,4 +1,4 @@
-package com.example.hotelbookingsystemnea;
+package Functions;
 
 import java.sql.*;
 

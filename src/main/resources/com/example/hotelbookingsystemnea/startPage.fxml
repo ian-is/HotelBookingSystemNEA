@@ -4,10 +4,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelbookingsystemnea.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.CustomerLoginAndRegistrationController">
    <children>
+
       <TextField fx:id="EmailTextField" layoutX="182.0" layoutY="113.0" prefHeight="32.0" prefWidth="251.0" />
-      <TextField layoutX="182.0" layoutY="190.0" prefHeight="32.0" prefWidth="251.0" />
+      <TextField fx:id="PasswordTextField" layoutX="182.0" layoutY="190.0" prefHeight="32.0" prefWidth="251.0" />
       <Label layoutX="182.0" layoutY="74.0" prefHeight="32.0" prefWidth="85.0" text="Email">
          <font>
             <Font size="23.0" />
@@ -25,7 +26,7 @@
             <Font size="10.0" />
          </font>
       </Button>
-      <Button layoutX="256.0" layoutY="235.0" mnemonicParsing="false" text="L O G I N" textFill="#3131e1" />
-      <Label fx:id="LoginMessage" layoutX="185.0" layoutY="43.0" prefHeight="17.0" prefWidth="211.0" textFill="#eb0707" />
+      <Button layoutX="256.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#LoginClick" text="L O G I N" textFill="#3131e1" />
+      <Label fx:id="IncorrectLogIn" layoutX="185.0" layoutY="43.0" prefHeight="17.0" prefWidth="211.0" textFill="#eb0707" />
    </children>
 </AnchorPane>

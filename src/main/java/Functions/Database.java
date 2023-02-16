@@ -1,9 +1,11 @@
-package com.example.hotelbookingsystemnea;
+package Functions;
 // currently this database class is made to retrieve data from the tables within the database
 //each method is a separate table from the database, to be able to individually access or view the data within it
-import java.sql.*;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
-import java.io.IOException;
 
 public class Database {
 

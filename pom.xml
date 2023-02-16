@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.hotelbookingsystemnea/com.example.hotelbookingsystemnea.HelloApplication
+                                com.example.hotelbookingsystemnea/com.example.hotelbookingsystemnea.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

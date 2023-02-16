@@ -1,13 +1,15 @@
 // Password Hashing Class.
-package com.example.hotelbookingsystemnea;
-import java.sql.*;
+package Functions;
+
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.SecureRandom;
+import java.sql.Connection;
+import java.sql.ResultSet;
 import java.util.Arrays;
 import java.util.Objects;
-import java.security.SecureRandom;
-import java.security.MessageDigest;
-import java.math.BigInteger;
 
-import static com.example.hotelbookingsystemnea.CustomerLogin.getConnection;
+import static Customer.CustomerLogin.getConnection;
 
 public class HashPassword {
 
@@ -96,8 +98,8 @@ public class HashPassword {
             ResultSet rs = SQL.executeQuery(con, sql);
             if (rs.next()) {
                 String salt = rs.getString("Salt");
-                rs.close;
-                assert con ! = null;
+                rs.close();
+                assert con != null;
                 con.close();
                 return salt;
 
