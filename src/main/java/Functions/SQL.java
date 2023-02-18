@@ -15,9 +15,10 @@ public class SQL {
     } catch (SQLException e) {
         System.out.println("SQL class error:" + e);
 
-    } return null;
+    }
 
-}
+       return null;
+   }
 
 // info is added to database
 

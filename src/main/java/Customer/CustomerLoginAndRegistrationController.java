@@ -28,14 +28,22 @@ public class CustomerLoginAndRegistrationController {
     @FXML // when 'Employee log in' button is clicked this switches it to the 'EmployeeLogin' page
     public void switchToEmployeeLoginPage(ActionEvent event) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("EmployeeLogin.fxml"));
+
+
+
+    }
+    @FXML // switches to employer registration page.
+    public void switchToEmployeeRegisterPage(ActionEvent event) throws IOException{
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("EmployeeRegisterPage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(fxmlLoader.load(), 705, 440);
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
-
     }
+
+
 
     @FXML // return button on  the employeeLogin page returns to the start page
     public void returnToStartPage(ActionEvent event) throws IOException {
@@ -69,7 +77,7 @@ public class CustomerLoginAndRegistrationController {
 
     @FXML // return button on the AdminHomePage takes you back to the EmployeeLogin Page
     public void adminReturnBtn(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("EmployeeLogin.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("EmployeeRegisterPage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(fxmlLoader.load(), 705, 440);
         stage.setResizable(false);
@@ -176,6 +184,7 @@ public class CustomerLoginAndRegistrationController {
 
 
     }
+
     @FXML
     protected void RegisterBtn2 (MouseEvent event) throws IOException {
         try {
@@ -201,16 +210,21 @@ public class CustomerLoginAndRegistrationController {
                 } else {                                                                      // add back dateofbirth.gettext
                     User customer = new User(CustomerID, FirstName.getText(), Surname.getText(), RegEmail.getText(), hashHex, salt);
                     CustomerAddedToDatabase(customer);
-                    RegError.setText("");
+                    RegError.setText("Registration error");
                     RegSuccessful.setText("account registered");
                 }
             }
         } catch (Exception e) {
+            System.out.println("account registration error:" + e);
 
         }
 
     }
-}
+
+
+
+    }
+
 
 
 

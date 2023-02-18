@@ -1,6 +1,8 @@
 package Functions;
 // currently this database class is made to retrieve data from the tables within the database
 //each method is a separate table from the database, to be able to individually access or view the data within it
+// this class shows that the database is connected.
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -22,7 +24,7 @@ public class Database {
             System.out.println("Employee Table:");
             while (rs1.next()) {
 
-                System.out.println("EmployeeID:" + " " + rs1.getInt(1) + " " + "|First Name:" + " " + rs1.getString("First name") + " " + "|Surname:" + " " + rs1.getString("surname") + " " + "|Password:" + " " + rs1.getString("password"));
+                System.out.println("EmployeeID:" + " " + rs1.getInt(1) + " " + "|First Name:" + " " + rs1.getString("Admin First name") + " " + "|Surname:" + " " + rs1.getString("Admin surname") + " " + "|Password:" + " " + rs1.getString("Admin password"));
             }
 
             rs1.close();
@@ -92,26 +94,6 @@ public class Database {
         }
 
     }
-
-    public static void restaurantBookingTbl() {
-        String DatabaseLocation = System.getProperty("user.dir") + "\\Database1.accdb";
-        try {
-            Connection con = DriverManager.getConnection("jdbc:ucanaccess://" + DatabaseLocation, "", "");
-            Statement stmt5 = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
-            String sql = "SELECT * FROM restaurantBooking";
-            ResultSet rs5 = stmt5.executeQuery(sql);
-            System.out.println("restaurantBooking Table: ");
-            while (rs5.next()) {
-                System.out.println("RestaurantBookingID:" + " " + rs5.getInt(1) + " " + "|BookingID:" + " " + rs5.getInt(2) + " " + "|Table number:" + " " + rs5.getInt(3) + " " + "|Bill amount £:" + " " + rs5.getInt(4) + " " + "|Time:" + " " + rs5.getTime(5) + " " + "|Date:" + " " +rs5.getDate(6));
-            }
-            rs5.close();
-            con.close();
-
-        } catch (Exception e) {
-            System.out.println("error in the Restaurant Booking table" + e);
-        }
-    }
-
     public static void roomTbl() {
 
         String DatabaseLocation = System.getProperty("user.dir") + "\\Database1.accdb";

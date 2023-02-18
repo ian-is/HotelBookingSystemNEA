@@ -63,15 +63,15 @@
          </font>
       </Label>
       <TextField fx:id="RegPassword" layoutX="230.0" layoutY="383.0" prefHeight="40.0" prefWidth="452.0" />
-      <Button layoutX="392.0" layoutY="471.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="104.0" text="Register " textFill="#0f1cd0">
+      <Button fx:id="RegisterBtn2" layoutX="392.0" layoutY="471.0" mnemonicParsing="false" onMouseClicked="#RegisterBtn2" prefHeight="34.0" prefWidth="104.0" text="Register " textFill="#0f1cd0">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
       <Button fx:id="registerReturnBtn" layoutX="628.0" layoutY="10.0" mnemonicParsing="false" onAction="#registrationReturnBtn" prefHeight="25.0" prefWidth="71.0" text="Return" />
       <Label layoutX="395.0" layoutY="95.0" prefHeight="17.0" prefWidth="103.0" text="(MM/DD/YYYY)" />
-      <Label fx:id="RegError" layoutX="317.0" layoutY="173.0" prefHeight="17.0" prefWidth="156.0" />
-      <Label fx:id="RegSuccessful" layoutX="319.0" layoutY="207.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label fx:id="RegError" layoutX="317.0" layoutY="173.0" prefHeight="17.0" prefWidth="230.0" />
+      <Label fx:id="RegSuccessful" layoutX="319.0" layoutY="207.0" prefHeight="17.0" prefWidth="230.0" />
 
    </children>
 </AnchorPane>

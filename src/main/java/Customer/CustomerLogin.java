@@ -31,15 +31,15 @@ public class CustomerLogin {
     // customer login
     public static boolean customerLogin(String Email, String Password) {
         try {
-            String sql = "SELECT from Customer where Email = '" + Email + "'";
+            String sql = "SELECT * FROM Customer where Email = '" + Email +  "SELECT * Customer where Password = '" + Password +"'";
             Connection con = getConnection();
             ResultSet rs = SQL.executeQuery(con, sql);
 
             if (rs.next()) {
                 Customer = new User(rs.getInt("CustomerID"),
-                        rs.getString("FirstName"),
+                        rs.getString("First Name"),
                         rs.getString("Surname"),
-                        rs.getString("DateOfBirth"),
+                        rs.getString("Date Of Birth"),
                         rs.getString("Email"),
                         rs.getString("Password"));
                 rs.close();

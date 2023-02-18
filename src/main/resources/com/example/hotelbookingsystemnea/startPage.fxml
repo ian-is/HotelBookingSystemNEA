@@ -28,5 +28,6 @@
       </Button>
       <Button layoutX="256.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#LoginClick" text="L O G I N" textFill="#3131e1" />
       <Label fx:id="IncorrectLogIn" layoutX="185.0" layoutY="43.0" prefHeight="17.0" prefWidth="211.0" textFill="#eb0707" />
+      <Button layoutX="217.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToEmployeeRegisterPage" prefHeight="11.0" prefWidth="167.0" text="Employee Registration" textFill="#2730e1" />
    </children>
 </AnchorPane>

@@ -12,4 +12,6 @@ module com.example.hotelbookingsystemnea {
     opens Customer to javafx.fxml;
     exports Objects;
     opens Objects to javafx.fxml;
+    exports Admin;
+    opens Admin to javafx.fxml;
 }
