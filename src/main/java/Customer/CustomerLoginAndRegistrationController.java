@@ -29,8 +29,6 @@ public class CustomerLoginAndRegistrationController {
     public void switchToEmployeeLoginPage(ActionEvent event) throws IOException {
 
 
-
-
     }
     @FXML // switches to employer registration page.
     public void switchToEmployeeRegisterPage(ActionEvent event) throws IOException{
@@ -132,7 +130,7 @@ public class CustomerLoginAndRegistrationController {
             if (CustomerLogin.customerLogin(Email, Password)) {
                 CustomerHomePage(event);
             } else {
-                IncorrectLogIn.setText("Login Details are Incorrect");
+                IncorrectLogIn.setText("Login details are incorrect");
             }
         } catch (Exception e) {
             System.out.println("details are incorrect: " + e.getCause());
@@ -210,8 +208,8 @@ public class CustomerLoginAndRegistrationController {
                 } else {                                                                      // add back dateofbirth.gettext
                     User customer = new User(CustomerID, FirstName.getText(), Surname.getText(), RegEmail.getText(), hashHex, salt);
                     CustomerAddedToDatabase(customer);
-                    RegError.setText("Registration error");
-                    RegSuccessful.setText("account registered");
+                    RegError.setText("");
+                    RegSuccessful.setText("customer added to database");
                 }
             }
         } catch (Exception e) {

@@ -15,13 +15,11 @@ public class HashPassword {
 
 
     // sets up the Hashing algorithm
-    // uses SHA-512 (Secure Hashing Algorithm). it converts texts into a fixed size string
-    // SHA-512 has a length of 512 bits (64 bytes)
     // salt is a value generated to create unique values to every input
 
     public static byte[] PasswordHash(String password, byte[] salt) {
         try {
-            MessageDigest message = MessageDigest.getInstance("SHA-512");
+            MessageDigest message = MessageDigest.getInstance("MD5");
             message.update(salt);
             byte[] passwordHash = message.digest(password.getBytes());
             message.reset();
@@ -45,10 +43,10 @@ public class HashPassword {
     // the salt generated is converted to Hex
     public static String ConvertToHex(byte[] array) {
         BigInteger integer = new BigInteger(1, array);
-        String hex = integer.toString(64);
+        String hex = integer.toString(16);
         int padding = (array.length * 2) - hex.length();
         if (padding > 0) {
-            return String.format("%0" + padding + "a", 0) + hex;
+            return String.format("%0" + padding + "d", 0) + hex;
 
         } else {
             return hex;
@@ -67,28 +65,17 @@ public class HashPassword {
     }
 
     // The hashed password is compared to the password entered by the user
-    public static boolean PasswordCompare(String PasswordFromDatabase, String PasswordEntered, String Email) {
+    public static boolean PasswordCompare(String Password, String PasswordEntered, String Email) {
 
 
         byte[] salt = ConvertToBinary(Objects.requireNonNull(getPasswordSalt(Email)));
-        if (Arrays.equals(PasswordHash(PasswordEntered, salt), ConvertToBinary(PasswordFromDatabase))) {
+        if (Arrays.equals(PasswordHash(PasswordEntered, salt), ConvertToBinary(Password))) {
             return true;
 
         }
         return false;
 
     }
-
-    /*public static Connection getConnection() {
-        String DatabaseLocation = System.getProperty("user.dir") + "\\Database1.accdb";
-        try {
-            Connection con = DriverManager.getConnection("jdbc:ucanaccess://" + DatabaseLocation, "", "");
-        } catch (SQLException e) {
-            System.out.println(e);
-        }
-
-        return null;
-    }*/
 
     // password salt from the database is fetched
     public static String getPasswordSalt(String Email) {

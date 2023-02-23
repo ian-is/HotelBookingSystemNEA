@@ -1,4 +1,6 @@
 package Functions;
+
+
 // currently this database class is made to retrieve data from the tables within the database
 //each method is a separate table from the database, to be able to individually access or view the data within it
 // this class shows that the database is connected.
@@ -45,7 +47,7 @@ public class Database {
             ResultSet rs2 = stmt2.executeQuery(sql);
             System.out.println("Customer Table: ");
             while (rs2.next()) {                                                                                                                                                                                           //DOB format is inverted as to the format on the database
-                System.out.println("CustomerID:" + " " + rs2.getInt(1) + " " + "|First Name:" + " " + rs2.getString("First Name") + " " + "|Surname:" + " " + rs2.getString("Surname") + " " + "|DOB (Y/D/M):" + " " + rs2.getDate("Date of Birth") + " " + "|Email:" + " " + rs2.getString("Email") + " " + "|Password:" + " " + rs2.getString("Password"));
+                System.out.println("CustomerID:" + " " + rs2.getInt(1) + " " + "|First Name:" + " " + rs2.getString("FirstName") + " " + "|Surname:" + " " + rs2.getString("Surname") + " " + "|DOB (Y/D/M):" + " " + rs2.getDate("Date of Birth") + " " + "|Email:" + " " + rs2.getString("Email") + " " + "|Password:" + " " + rs2.getString("Password"));
             }
             rs2.close();
             con.close();
@@ -100,7 +102,7 @@ public class Database {
         try {
             Connection con = DriverManager.getConnection("jdbc:ucanaccess://" + DatabaseLocation, "", "");
             Statement stmt6 = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
-            String sql = "SELECT * FROM restaurantBooking";
+            String sql = "SELECT * FROM Room";
             ResultSet rs6 = stmt6.executeQuery(sql);
             System.out.println("Room Table: ");
             while (rs6.next()) {

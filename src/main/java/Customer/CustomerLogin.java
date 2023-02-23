@@ -1,13 +1,12 @@
 package Customer;
 
 import Functions.HashPassword;
-import Functions.SQL;
 import Objects.User;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-
+import java.sql.Statement;
 
 
 public class CustomerLogin {
@@ -31,15 +30,16 @@ public class CustomerLogin {
     // customer login
     public static boolean customerLogin(String Email, String Password) {
         try {
-            String sql = "SELECT * FROM Customer where Email = '" + Email +  "SELECT * Customer where Password = '" + Password +"'";
             Connection con = getConnection();
-            ResultSet rs = SQL.executeQuery(con, sql);
+            String sql = "UPDATE * FROM Customer where Email = '" + Email +  "SELECT * Customer where Password = '" + Password +"'";
+            Statement stmt = con.createStatement (ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            ResultSet rs = stmt.executeQuery(sql);
 
             if (rs.next()) {
                 Customer = new User(rs.getInt("CustomerID"),
-                        rs.getString("First Name"),
+                        rs.getString("FirstName"),
                         rs.getString("Surname"),
-                        rs.getString("Date Of Birth"),
+                        rs.getString("DateOfBirth"),
                         rs.getString("Email"),
                         rs.getString("Password"));
                 rs.close();
@@ -51,6 +51,9 @@ public class CustomerLogin {
                     return true;
                 }
             }
+            rs.close();
+            assert con != null;
+            con.close();
 
         } catch (Exception e) {
             System.out.println("customer Login error:" + e);

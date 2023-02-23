@@ -2,13 +2,14 @@
 
 package com.example.hotelbookingsystemnea;
 
-import Functions.Database;
+import Admin.AdminEntry;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 
 public class Main extends Application {
@@ -25,12 +26,17 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch();
-        //database tables
-        Database.employeeTbl();
-        Database.customerTbl();
-        Database.bookingTbl();
-        Database.bookingToRoomLinkTbl();
-        Database.roomTbl();
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("welcome to the booking System");
+        System.out.println("Are you a Admin (Y/N)");
+        String userInput = input.next();
+        if (userInput.equals("Y")) {
+            AdminEntry.AdminEntry();
+
+        }else {
+            System.out.println("if you are a customer please use the customer interface (GUI)");
+        }
 
 
 

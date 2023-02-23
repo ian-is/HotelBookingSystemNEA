@@ -15,12 +15,19 @@ public class User {
     private String Password;
 
     public User (int CustomerID, String FirstName, String Surname, String DateOfBirth, String Email, String Password){
-        this.setCustomerID(CustomerID);
+        /*this.setCustomerID(CustomerID);
         this.setFirstName(FirstName);
         this.setSurname(Surname);
         this.setDateOfBirth(DateOfBirth);
         this.setEmail(Email);
-        this.setPassword(Password);
+        this.setPassword(Password);*/
+
+        this.CustomerID = CustomerID;
+        this.FirstName = FirstName;
+        this.Surname = Surname;
+        this.DateOfBirth = DateOfBirth;
+        this.Email = Email;
+        this.Password = Password;
 
     }
 
